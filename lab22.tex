@@ -1,0 +1,110 @@
+\documentclass[11pt,twoside]{article}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{mathtools} 
+\usepackage[integrals]{wasysym}
+%\usepackage{fancyhdr} 
+%\pagestyle{fancy}
+%\lhead{136}
+%\rhead{\it\S\ \it {\sl{47}. Криволинейные интегралы}}
+\makeatletter
+\renewcommand{\@oddhead}{134\hfill\emph{\S\ {\sl47}. Криволинейные интегралы}}
+\renewcommand{\@oddfoot}{}
+\renewcommand{\@evenhead}{{\sl 47.7.} \emph {Геометрический смысл знака якобиана}\hfill 135}
+\renewcommand{\@evenfoot}{}
+\makeatother
+\textwidth=122mm
+\textheight=199mm
+\newcommand\mes{\mathop{\mathrm{mes}}\nolimits}
+\begin{document}
+\noindent торой состоит из конечного числа кусучно-гладких кривых.\;Мы,\linebreak однако, не будем останавливаться на доказательстве этого факта,\linebreak а ограничимся лишь его формулировкой. При этом, используя опре-\linebreak деление 7, мы запишем формулу (47.19) в более компактном виде.
+
+\textbf{\textit{Теорема} {\sl\textbf 1'}.} \emph{\!Пусть\ граница плоской ограниченной области\linebreak G состоит из конечного числа кучно-гладких кривых. Тогда,\linebreak если функции P, Q, $ \frac{\partial P} {\partial y} $ и $ \frac{\partial Q} {\partial x} $ непрерывны на $\overline{G}$, то
+   $$\displaystyle\iint\limits_G \left( \frac{\partial Q} {\partial x} - \frac{\partial P} {\partial y} \right) dx\,dy = {\int\limits_{\partial\,G}} P\,dx + Q\,dy,$$
+где ${\partial G}$ --- положительно ориентированная граница области G.}
+
+\begin{center}
+
+\setcounter{section}{47}
+\setcounter{subsection}{6}
+\subsection{Вычисление площадей с помощью\linebreak криволинейных интегралов}
+\subsection{\bf 47.6 Вычисление площадей с помощью\linebreak}
+\end{center}
+\paragraph{криволинейных интегралов}
+
+
+
+
+Пологая в формуле Грина $Q = x, P = 0$, получим
+$$\iint\limits_G dx\,dy = \int\limits_{\gamma^+} xdy$$
+и, следовательно,
+$$\small\mes G = \int\limits_{\gamma^+}xdy.\eqno{(47.20)}$$
+Аналогично, полагая P = --y, Q = 0, получим
+$$\small\mes G = -\int\limits_{\gamma^+} ydx.\eqno{(47.21)}$$
+Складывая формулы (47.20) и (47.21), будем иметь
+$$\small\mes G = \frac12 \int\limits_{\gamma^+} xdy - ydx.\eqno{(47.22)}$$
+
+    Найдем с помощью этой формулы в качестве примера пло-\linebreak щадь, ограниченную астроидой (см. в т. I рис. 61) $x = acos^3t,\linebreak y = asin^3t,\,{0\leq t\leq 2\pi.}$ Замечая, что здесь возрастание парамет-\linebreak ра $t$ соответствует положительной ориентации контура, имеем
+\begin{split}
+\par
+$$ S = \frac12\int\limits_{\gamma^+} xdy - ydx = \frac{3a^2} {2} \int\limits_0^{2\pi} (cos^4 t sin^2 t + sin^4 t cos^2 t) dt = \\ $$
+    $$ = {\frac{3a^2}{8}\int\limits_0^{2\pi} sin^2\,2t dt = \frac{3a^2} {16} \int\limits_0^{2\pi} (1 - cos 4t) dt = \frac{3\pi a^2} {8}.} $$
+\par
+\end{split}
+
+
+\newpage
+%\rhead{135}
+%\lhead{47.7 \emph {Геометрический смысл знака якобиана}}
+
+\begin{center}
+\subsection{\bf 47.7 Геометрический смысл знака якобиана\linebreak отображения плоских областей}
+\end{center}
+
+Пусть $F$ --- взаимно однозначное непрерывно дифферен-\linebreak цируемое отображение плоской области $G\!\!\!\!\subset\!\!\!\!E^2_{uv}$ в плоскость $E^2_{xy}$\linebreak с якобианом, всюду в {\it G} не равным нулю. Тогда в силу принципа\linebreak сохранения области множество $G^* = F(\!G\!)$ также является областью\linebreak (см. п. 41.5), а якобиан в силу его непрерывности сохраняет знак на\linebreak $G$ (см. теорему 4 в п. 19.4), т.е. либо всюду на $G$ положителен, либо\linebreak всюду отрицателен.
+
+В координатной записи отображение $F$ задаётся формулами
+$$\left.
+  \begin{array}{ccc}
+    x & = & x\,(u, v), \\
+    y & = & y\,(u, v), \\
+  \end{array}
+\right\} \eqno{(47.23)}$$  
+причем, если $ M = (u,\,v),\,M^* = (x,\,y)$, то $M^* = F(M).$
+
+Будем предпологать еще, что смешанные производные $\frac{\partial^2\:y}{\partial v\:\partial u}$\linebreak
+и $\frac{\partial^2\:y}{\partial u\:\partial v}$ непрерывны, а следовательно, и равны друг другу во всех точках $G$.
+
+Пусть теперь $\gamma$ - простой замкнутый кусочно-гладкий контур,\linebreak
+расположенный в области $G$. Тогда (см. п. 46.2)\:$\gamma^* = F(\gamma)$ также яв-\linebreak
+ляется простым замкнутым кусочно-гладким контуром. Пусть кон-\linebreak
+тур $\gamma$ является границей ограниченной области $\Gamma\! \subset \!G^*$, а контур\linebreak
+$\gamma^*$ - ограниченной области $\Gamma^*\subset G^*$. Пусть $\Gamma^*\subset F(\Gamma)$ и области $\Gamma$\linebreak
+и $\Gamma^*$ таковы, что к ним применима формула Грина, например, они\linebreak
+удолетворяют условиям, налагаемым на область в теореме 1.\linebreak
+(На самом деле, как это уже отмечалось, при сделанных предположе-\linebreak
+ниях это всегда имеет место, однако это не было доказано.)
+
+Пусть, наконец,
+$$\begin{array}{ccc}
+    u = u\,(t), \\
+      v = v\,(t), \\
+      a\leq t\leq b, 
+\end{array}$$
+\begin{flushleft}
+\item[$-$] \noindent представление контура $\gamma^+$, и, следовательно,
+\end{flushleft}
+$$\begin{array}{ccc}
+       x = x[u\,(t), v\,(t)], \\
+         y = y[u\,(t), v\,(t)], \\
+         a\leq t\leq b, 
+\end{array} \eqno{(47.24)}$$
+\begin{flushleft}
+\item[$-$] \noindent некоторое представление контура $\gamma^*$.
+\end{flushleft}
+
+
+
+
+\newpage
+\end{document}
